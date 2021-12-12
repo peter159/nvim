@@ -17,6 +17,3 @@ require('comment-config')
 require('lsp')
 vim.cmd('colorscheme vim-monokai-tasty')
 
-
-
-
