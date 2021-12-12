@@ -11,7 +11,7 @@ end
 local mappings = {
   q = {
     name = "quit",
-      q = {":q<CR>", "Quit"}
+      q = {":qa<CR>", "Quit"}
   },
   
   ["'"] = {":ToggleTerm<CR>", "toggle terminal"},
@@ -30,6 +30,11 @@ local mappings = {
     name = "window",
     s = {":split<CR>", "horizental split"},
     v = {":vsplit<CR>", "horizental split"},
+    d = {":q<CR>", "close window"},
+    h = {"<C-w>h", "move window focus left"},
+    l = {"<C-w>l", "move window focus right"},
+    k = {"<C-w>k", "move window focus up"},
+    j = {"<C-w>k", "move window focus down"},
   },
 
   b = {
