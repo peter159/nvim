@@ -41,6 +41,7 @@ return require('packer').startup(function()
     end
     -- tag = 'release' -- To use the latest release
   }
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
   use {'norcalli/nvim-colorizer.lua'}
   use {'glepnir/dashboard-nvim'}
   use {'lukas-reineke/indent-blankline.nvim'}

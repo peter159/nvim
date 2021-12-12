@@ -44,14 +44,14 @@ local mappings = {
   },
 
   t = {
-    name = "toggle",
-      t = {name = "terminal", t = {":ToggleTerm<CR>", "toggle terminal"},
-      f = {toggle_float, "toggle Floating Terminal"}}
+    name = "terminal",
+      t = {":ToggleTerm<cr>", "toggle terminal"},
+      f = {toggle_float, "toggle Floating Terminal"},
   },
 
   g = {
     name = "git",
-      s = {"<cmd>Gitsigns stage_buffer<CR>", "stage buffer"},
+      s = {"<cmd>Gitsigns stage_buffer<CR>", "stash buffer"},
   },
 
   l = {
