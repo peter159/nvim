@@ -51,7 +51,7 @@ local mappings = {
 
   g = {
     name = "git",
-      s = {"<cmd>Gitsigns stage_buffer<CR>", "stash buffer"},
+      s = {":Neogit<CR>", "stash buffer"},
   },
 
   l = {
