@@ -1,13 +1,59 @@
 local wk = require("which-key")
+local Terminal = require('toggleterm.terminal').Terminal
+local toggle_float = function()
+  local float = Terminal:new({direction = "float"})
+  return float:toggle()
+end
+local toggle_lazygit = function()
+  local lazygit = Terminal:new({cmd = 'lazygit', direction = "float"})
+  return lazygit:toggle()
+end
 local mappings = {
-  qq = {":q<CR>", "Quit"},
-  fs = {":w<CR>", "Save current file"},
-  fed = {":e ~/.config/nvim/init.lua<CR>", "Go to Nvim config"},
-  ft = {":NvimTreeToggle<CR>", "Open file tree"},
-  wd = {":bdelete<CR>", "Close current buffer"},
-  ff = {":Telescope find_files<CR>", "Telescope find files"},
-  fr = {":Telescope oldfiles<CR>", "Telescope find files"},
+  q = {
+    name = "quit",
+      q = {":q<CR>", "Quit"}
+  },
+  
+  ["'"] = {":ToggleTerm<CR>", "toggle terminal"},
   r = {":Telescope live_grep<CR>", "Telescope live grep"},
+
+  f = {
+    name = "File",
+      e = {name="editor", d = {":e ~/.config/nvim/init.lua<CR>", "edit config"}},
+      s = {":w<CR>", "save current buffer"},
+      r = {":Telescope oldfiles<CR>", "recent files"},
+      f = {":Telescope find_files<CR>", "Telescope find files"},
+      t = {":NvimTreeToggle<CR>", "toggle filetree pannel"},
+  },
+
+  w = {
+    name = "window",
+    s = {":split<CR>", "horizental split"},
+    v = {":vsplit<CR>", "horizental split"},
+  },
+
+  b = {
+    name = "buffer",
+      x = {":bdelete<CR>", "kill current buffer"},
+      I = {":Telescope buffers<CR>", "list all buffer"},
+  },
+
+  j = {
+    name = "jump",
+      j = {"::HopChar2<CR>", "jump char 2"},
+  },
+
+  t = {
+    name = "toggle",
+      t = {name = "terminal", t = {":ToggleTerm<CR>", "toggle terminal"},
+      f = {toggle_float, "toggle Floating Terminal"}}
+  },
+
+  g = {
+    name = "git",
+      s = {"<cmd>Gitsigns stage_buffer<CR>", "stage buffer"},
+  },
+
   l = {
     name = "LSP",
       i =  {":LspInfo<CR>",  "Connected Language Servers"},
