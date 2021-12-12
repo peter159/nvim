@@ -1,0 +1,22 @@
+require('plugins')
+require('keybindings')
+require('options')
+require('lualine-config')
+require('bufferline-config')
+require('nvim-tree-config')
+require('treesitter-config')
+require('autopairs-config')
+require('whichkey-config')
+require('telescope-config')
+require('colorizer-config')
+require('dashboard-config')
+require('blankline-config')
+require('format-config')
+require('toggleterm-config')
+require('comment-config')
+require('lsp')
+vim.cmd('colorscheme vim-monokai-tasty')
+
+
+
+
