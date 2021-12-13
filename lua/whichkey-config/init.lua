@@ -24,6 +24,7 @@ local mappings = {
       r = {":Telescope oldfiles<CR>", "recent files"},
       f = {":Telescope find_files<CR>", "Telescope find files"},
       t = {":NvimTreeToggle<CR>", "toggle filetree pannel"},
+      j = {":Telescope file_browser<CR>", "Telescope find browser"},
   },
 
   w = {
